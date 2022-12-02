@@ -2,7 +2,7 @@
   Development Portfolio - V2.0
 </h1>
 <p align="center">
-    <img src="https://img.shields.io/github/package-json/v/Jordi-Jaspers/Portfolio-V2" alt="Version" >
+    <img src="https://img.shields.io/github/package-json/v/Jordi-Jaspers/Portfolio-V2?filename=frontend%2Fpackage.json" alt="GitHub package.json version (subfolder of monorepo)">
     <img src="https://img.shields.io/github/license/Jordi-Jaspers/Portfolio-V2" alt="License" >
     <img src="https://img.shields.io/github/commit-activity/m/Jordi-Jaspers/Portfolio-V2" alt="Commit Activity" >
     <img src="https://img.shields.io/github/last-commit/Jordi-Jaspers/Portfolio-V2" alt="Last Commit" >
