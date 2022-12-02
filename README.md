@@ -95,4 +95,7 @@ The `pages/api` directory is mapped to `/api/*`. Files in this directory are tre
 ## 🚀 References <a name = "references"></a>
 
 * Troubleshooting: <https://stackoverflow.com/>
-* ...
+* Next.js: <https://nextjs.org/docs/getting-started>
+* TailwindCSS: <https://tailwindcss.com/docs>
+* Next.js Tutorial: <https://www.youtube.com/watch?v=urgi2iz9P6U&list=WL&index=67&t=1989s>
+* Inspiration: <https://brittanychiang.com/>
