@@ -1,0 +1,41 @@
+{
+  "name": "portfolio-v2",
+  "description": "Personal Development Portfolio V2",
+  "version": "0.0.0-SNAPSHOT",
+  "author": "Jordi Jaspers <jordijaspers@gmail.com>",
+  "keywords": [
+    "Next.js",
+    "Nextjs",
+    "React",
+    "Portfolio",
+    "Software Engineer",
+    "Frontend Developer",
+    "Jordi Jaspers"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "clean": "rm -Rf dist node_modules .next/cache cypress/videos cypress/screenshots cypress-terminal-report",
+    "clean-start": "npm run clean && npm i && npm start",
+    "test:unit": "cross-env NODE_ENV=test jest --coverage",
+    "test": "npm run test:unit",
+    "test:watch": "cross-env NODE_ENV=test jest --watchAll",
+    "coveralls": "cat ./coverage/lcov.info | coveralls",
+    "prettier": "prettier --config .prettierrc \"./**/*.+(js|json|jsx)\" --write",
+    "clean:example": "rnb --c"
+  },
+  "dependencies": {
+    "@types/node": "18.11.10",
+    "@types/react": "18.0.25",
+    "@types/react-dom": "18.0.9",
+    "eslint": "8.28.0",
+    "eslint-config-next": "13.0.6",
+    "next": "13.0.6",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "typescript": "4.9.3"
+  }
+}
