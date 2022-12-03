@@ -8,7 +8,7 @@ const Home: NextPage = () => {
         <div className={"bg-[#0a192f] text-[#e6f1ff] h-screen snap-y snap-mandatory overflow-scroll z-0"}>
             {/*  TAB TITLE  */}
             <Head>
-                <title>Jordi's Portfolio</title>
+                <title>Welcome | Jordi Jaspers</title>
             </Head>
 
             {/*  HEADER  */}
@@ -28,7 +28,6 @@ const Home: NextPage = () => {
             {/*  PROJECTS  */}
 
             {/*  CONTACT ME */}
-
 
         </div>
     )
