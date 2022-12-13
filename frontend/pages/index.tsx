@@ -3,6 +3,10 @@ import Header from "../components/Header";
 import Head from "next/head";
 import Hero from "../components/Hero";
 import dynamic from "next/dynamic";
+import Experience from "../components/Experience";
+import Skills from '../components/Skills';
+import Services from '../components/Services';
+import Contact from '../components/Contact';
 
 const About = dynamic(() => import('../components/About'), {
     ssr: false
@@ -21,23 +25,42 @@ const Home: NextPage = () => {
             <Header/>
 
             {/*  HERO  */}
-            <section id={"hero"} className={"snap-center"}>
+            <section id={"hero"}>
                 <Hero/>
             </section>
 
             {/*  ABOUT  */}
-            <section id={"About"} className={"snap-center"}>
+            <section id={"About"}>
                 <About/>
             </section>
 
             {/*  EXPERIENCE  */}
+            <section id={"Experience"}>
+                <Experience/>
+            </section>
 
             {/*  SKILLS  */}
+            <section id={"Skills"}>
+                <Skills/>
+            </section>
 
             {/*  PROJECTS  */}
+            <section id={"Services"}>
+                <Services/>
+            </section>
 
             {/*  CONTACT ME */}
+            <section id={"Contact"}>
+                <Contact/>
+            </section>
 
+            {/* FOOTER */}
+            <footer className={"flex flex-row items-center justify-center h-20 w-full bg-navy"}>
+                <a className={"text-green font-mono link-underline link-underline-black"}
+                   href={"https://github.com/Jordi-Jaspers/Portfolio-V2"}>
+                    © Designed and built by Jordi Jaspers
+                </a>
+            </footer>
         </div>
     )
 }
