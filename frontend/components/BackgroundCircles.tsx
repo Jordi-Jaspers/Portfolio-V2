@@ -18,10 +18,10 @@ export default function BackgroundCircles({}: Props) {
             transition={{
                 duration: 2.5,
             }}>
-            <div className={"absolute border border-[#8892b0] rounded-full h-[300px] w-[300px] mt-52 opacity-30"}/>
-            <div className={"absolute border border-[#64ffda] rounded-full h-[500px] w-[500px] mt-52 animate-pulse"}/>
-            <div className={"absolute border border-[#64ffda] rounded-full h-[650px] w-[650px] mt-52 opacity-40"}/>
-            <div className={"absolute border border-[#64ffda] rounded-full h-[800px] w-[800px] mt-52 opacity-30"}/>
+            <div className={"absolute border border-slate rounded-full h-[300px] w-[300px] mt-52 opacity-30"}/>
+            <div className={"absolute border border-green rounded-full h-[500px] w-[500px] mt-52 animate-pulse"}/>
+            <div className={"absolute border border-green rounded-full h-[650px] w-[650px] mt-52 opacity-40"}/>
+            <div className={"absolute border border-green rounded-full h-[800px] w-[800px] mt-52 opacity-30"}/>
         </motion.div>
     )
 }

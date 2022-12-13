@@ -4,7 +4,39 @@
 
 @layer components {
   .default-button {
-    @apply px-6 mx-2 my-2 py-2 border border-[#233554] rounded-full uppercase text-xs
-    tracking-widest text-[#8892b0] transition-all hover:border-[#64ffda]/75 hover:text-[#ccd6f6]
+    @apply px-3 mx-2 sm:my-2 py-2 border border-lightest-navy rounded-full uppercase text-[10px] sm:text-xs
+    tracking-widest text-slate transition-all hover:border-green/75 hover:text-lightest-slate
+  }
+
+  .section-header {
+    @apply top-24 absolute text-3xl ml-[10px] flex
+    before:text-green before:mr-[10px]
+    after:content-[''] after:bg-lightest-navy after:ml-[10px] after:sm:ml-[10px] after:w-[200px] after:sm:w-[300px] after:block after:h-px after:top-[20px] after:relative
+  }
+
+  .paragraph {
+    @apply text-base text-justify mb-3 text-slate
+  }
+
+  .arrow {
+    @apply before:content-['▹'] before:text-green before:mr-3
+  }
+
+  .link-underline {
+    border-bottom-width: 0;
+    background-image: linear-gradient(transparent, transparent), linear-gradient(#64ffda, #64ffda);
+    background-size: 0 1px;
+    background-position: 0 100%;
+    background-repeat: no-repeat;
+    transition: background-size .5s ease-in-out;
+  }
+
+  .link-underline-black {
+    background-image: linear-gradient(transparent, transparent), linear-gradient(#64ffda, #64ffda)
+  }
+
+  .link-underline:hover {
+    background-size: 100% 1px;
+    background-position: 0 100%
   }
 }

@@ -2,10 +2,5 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/Next-JS-Landing-Page-Starter-Template" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/frontend" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/portfolio-v2" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/react-next-boilerplate" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/v4" vcs="Git" />
   </component>
 </project>

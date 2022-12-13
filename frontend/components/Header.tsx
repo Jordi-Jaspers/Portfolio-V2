@@ -58,7 +58,7 @@ export default function Header({}: Props) {
                     fgColor={"#64ffda"}
                 />
             </motion.div>
-            <motion.div className={"flex flex-row items-center text-[#64ffda] cursor-pointer"}
+            <motion.div className={"flex flex-row items-center text-green cursor-pointer"}
                         initial={{
                             x: 500,
                             opacity: 0,
@@ -74,13 +74,13 @@ export default function Header({}: Props) {
                         }}>
                 {/* Email */}
                 <SocialIcon
-                    url="https://twitter.com/jaketrent"
+                    url="mailto:jordijaspers@gmail.com"
                     className="cursor-pointer"
                     network="email"
                     bgColor={"transparent"}
                     fgColor={"#64ffda"}
                 />
-                <p className={"uppercase hidden md:inline-flex text-sm text-[#64ffda]"}>Get In Touch</p>
+                <p className={"uppercase hidden md:inline-flex text-sm text-green"}>Get In Touch</p>
             </motion.div>
         </header>
     )
