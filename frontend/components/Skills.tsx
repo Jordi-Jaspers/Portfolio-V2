@@ -10,7 +10,7 @@ export default function Skills({}: Props) {
     return (
         <div className={"flex flex-row items-start relative h-screen w-screen text-left max-w-7xl px-10 mx-auto"}>
             <h3 className={"section-header before:content-['03.']"}>
-                Experience
+                Skills
             </h3>
         </div>
     )

@@ -2,20 +2,16 @@ import type {NextPage} from 'next'
 import Header from "../components/Header";
 import Head from "next/head";
 import Hero from "../components/Hero";
-import dynamic from "next/dynamic";
 import Experience from "../components/Experience";
 import Skills from '../components/Skills';
 import Services from '../components/Services';
 import Contact from '../components/Contact';
-
-const About = dynamic(() => import('../components/About'), {
-    ssr: false
-});
+import About from "../components/About";
 
 const Home: NextPage = () => {
 
     return (
-        <div className={"bg-navy text-white h-screen snap-y snap-mandatory overflow-scroll z-0"}>
+        <div className={"bg-white text-navy dark:bg-navy dark:text-white h-screen snap-y snap-mandatory overflow-scroll z-0"}>
             {/*  TAB TITLE  */}
             <Head>
                 <title>Welcome | Jordi Jaspers</title>
@@ -24,7 +20,7 @@ const Home: NextPage = () => {
             {/*  HEADER  */}
             <Header/>
 
-            {/*  HERO  */}
+            {/*/!*  HERO  *!/*/}
             <section id={"hero"}>
                 <Hero/>
             </section>

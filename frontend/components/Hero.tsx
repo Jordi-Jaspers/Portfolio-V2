@@ -15,7 +15,7 @@ export default function Hero({}: Props) {
     });
 
     return (
-        <div className={"h-screen flex flex-col space-y-8 items-center justify-center text-center overflow-hidden"}>
+        <div className={"h-screen flex flex-col space-y-8 items-center justify-center text-center"}>
             <BackgroundCircles/>
             <Image
                 className={"relative rounded-full mx-auto"}
@@ -25,12 +25,18 @@ export default function Hero({}: Props) {
                 height={145}
             />
             <div className={"z-20"}>
-                <h2 className={"text-[11px] sm:text-sm uppercase text-slate pb-2 tracking-[15px]"}>
+                <h2 className={"text-[11px] sm:text-sm uppercase text-lightest-navy dark:text-slate pb-2 tracking-[15px]"}>
                     Software Engineer
                 </h2>
                 <h1 className={"text-3xl md:text-4xl lg:text-6xl font-semibold scroll-px-10"}>
-                    <span className={"mr-3"}>{text}</span>
-                    <Cursor cursorColor={"white"} cursorBlinking={true}/>
+                    <div className={"hidden dark:flex"}>
+                        <span className={"mr-3"}>{text}</span>
+                        <Cursor cursorColor={"white"} cursorBlinking={true}/>
+                    </div>
+                    <div className={"flex dark:hidden"}>
+                        <span className={"mr-3"}>{text}</span>
+                        <Cursor cursorColor={"navy"} cursorBlinking={true}/>
+                    </div>
                 </h1>
                 <div>
                     <div className={"pt-5"}>

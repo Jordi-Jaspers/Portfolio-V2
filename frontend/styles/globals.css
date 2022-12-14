@@ -4,22 +4,27 @@
 
 @layer components {
   .default-button {
-    @apply px-3 mx-2 sm:my-2 py-2 border border-lightest-navy rounded-full uppercase text-[10px] sm:text-xs
-    tracking-widest text-slate transition-all hover:border-green/75 hover:text-lightest-slate
+    @apply px-3 mx-2 sm:my-2 py-2 border dark:border-lightest-navy rounded-full uppercase text-[10px] sm:text-xs
+    tracking-widest dark:text-slate transition-all dark:hover:border-green/75 dark:hover:text-lightest-slate
+    text-lightest-navy border-slate hover:border-amber/75 hover:text-navy
   }
 
   .section-header {
     @apply top-24 absolute text-3xl ml-[10px] flex
-    before:text-green before:mr-[10px]
-    after:content-[''] after:bg-lightest-navy after:ml-[10px] after:sm:ml-[10px] after:w-[200px] after:sm:w-[300px] after:block after:h-px after:top-[20px] after:relative
+    before:text-amber dark:before:text-green before:mr-[10px]
+    after:content-[''] after:bg-amber/50 dark:after:bg-lightest-navy after:ml-[10px] after:sm:ml-[10px] after:w-[200px] after:sm:w-[300px] after:block after:h-px after:top-[20px] after:relative
   }
 
   .paragraph {
-    @apply text-base text-justify mb-3 text-slate
+    @apply text-base text-justify mb-3 dark:text-slate text-navy
   }
 
   .arrow {
-    @apply before:content-['▹'] before:text-green before:mr-3
+    @apply before:content-['▹'] before:text-amber dark:before:text-green before:mr-3
+  }
+
+  .reactive-socials {
+    @apply transition-all duration-500 scale-100 hover:duration-500 hover:scale-125 dark:text-green text-navy
   }
 
   .link-underline {
@@ -38,5 +43,27 @@
   .link-underline:hover {
     background-size: 100% 1px;
     background-position: 0 100%
+  }
+
+  .link-underline-dark {
+    border-bottom-width: 0;
+    background-image: linear-gradient(transparent, transparent), linear-gradient(#fca311, #fca311);
+    background-size: 0 1px;
+    background-position: 0 100%;
+    background-repeat: no-repeat;
+    transition: background-size .5s ease-in-out;
+  }
+
+  .link-underline-dark:hover {
+    background-size: 100% 1px;
+    background-position: 0 100%
+  }
+
+  .link-underline-black-dark {
+    background-image: linear-gradient(transparent, transparent), linear-gradient(#fca311, #fca311)
+  }
+
+  .interactive-underline {
+    @apply text-amber link-underline-dark link-underline-black-dark dark:text-green dark:link-underline dark:link-underline-black
   }
 }
