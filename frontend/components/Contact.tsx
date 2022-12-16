@@ -3,6 +3,7 @@ import Image from "next/image";
 import ProfilePicture from "../public/images/profile-picture.jpg";
 import {motion} from 'framer-motion';
 import dynamic from "next/dynamic";
+import {SocialIcon} from "react-social-icons";
 
 type Props = {}
 

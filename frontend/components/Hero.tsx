@@ -9,13 +9,13 @@ type Props = {}
 
 export default function Hero({}: Props) {
     const [text, count] = useTypewriter({
-        words: ["< Welcome To The Website />", "YourAverageSoftwareEngineer.java", "Get-Your-Custom-Software.sh"],
+        words: ["< Welcome To The Website />", "YourAverageSoftwareEngineer.java", "Order-Custom-Software-Now.sh"],
         loop: true,
         delaySpeed: 1000,
     });
 
     return (
-        <div className={"h-screen flex flex-col space-y-8 items-center justify-center text-center"}>
+        <div className={"h-screen min-h-[500px] flex flex-col space-y-8 items-center justify-center text-center"}>
             <BackgroundCircles/>
             <Image
                 className={"relative rounded-full mx-auto"}
@@ -24,7 +24,7 @@ export default function Hero({}: Props) {
                 width={145}
                 height={145}
             />
-            <div className={"z-20"}>
+            <div className={"z-[5]"}>
                 <h2 className={"text-[11px] sm:text-sm uppercase text-lightest-navy dark:text-slate pb-2 tracking-[15px]"}>
                     Software Engineer
                 </h2>

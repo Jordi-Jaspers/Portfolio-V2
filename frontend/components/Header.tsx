@@ -1,172 +1,110 @@
-import React from 'react'
-import {SocialIcon} from "react-social-icons";
+import React, {useState} from 'react'
 import {motion} from "framer-motion";
 import DarkModeToggle from "./DarkModeToggle";
 import {ThemeProvider} from "next-themes";
+import SocialsBar from "./SocialsBar";
+import {SocialIcon} from "react-social-icons";
 
 type Props = {}
 
 // Using 'https://github.com/jaketrent/react-social-icons' to render social icons
 // Framer motion for animations (https://www.framer.com/docs/examples/)
 export default function Header({}: Props) {
+    const [isOpen, setIsOpen] = useState(false);
+    const hamburgerLine = `h-0.5 my-[0.5em] rounded-full transition ease transform duration-300 bg-navy dark:bg-green`;
+
     return (
-        <header className={"flex sticky top-0 p-5 items-start justify-between max-w-7xl mx-auto z-20 xl:items-center"}>
-            <div className={"flex dark:hidden"}>
-                <motion.div
-                    initial={{
-                        x: -500,
-                        opacity: 0,
-                        scale: 0.5
-                    }}
-                    animate={{
-                        x: 0,
-                        opacity: 1,
-                        scale: 1
-                    }}
-                    transition={{
-                        duration: 1.5
-                    }}>
-
-                    {/* Twitter */}
-                    <SocialIcon
-                        className="reactive-socials"
-                        url="https://twitter.com/Jordi_Jaspers"
-                        bgColor={"transparent"}
-                        fgColor={"#0a192f"}
-                    />
-
-                    {/* Instagram */}
-                    <SocialIcon
-                        className="reactive-socials"
-                        url="https://instagram.com/Jordi_jaspers"
-                        bgColor={"transparent"}
-                        fgColor={"#0a192f"}
-                    />
-
-                    {/* LinkedIn */}
-                    <SocialIcon
-                        className="reactive-socials"
-                        url="https://www.linkedin.com/in/jordi-jaspers"
-                        bgColor={"transparent"}
-                        fgColor={"#0a192f"}
-                    />
-
-                    {/* GitHub */}
-                    <SocialIcon
-                        className="reactive-socials"
-                        url="https://www.github.com/Jordi-jaspers"
-                        bgColor={"transparent"}
-                        fgColor={"#0a192f"}
-                    />
-
-                    {/* CodeWars */}
-                    <SocialIcon
-                        className="reactive-socials"
-                        url="https://www.codewars.com/users/Jordi-Jaspers"
-                        bgColor={"transparent"}
-                        fgColor={"#0a192f"}
-                    />
-                </motion.div>
-            </div>
-            <div className={"hidden dark:flex"}>
-                <motion.div
-                    initial={{
-                        x: -500,
-                        opacity: 0,
-                        scale: 0.5
-                    }}
-                    animate={{
-                        x: 0,
-                        opacity: 1,
-                        scale: 1
-                    }}
-                    transition={{
-                        duration: 1.5
-                    }}>
-
-                    {/* Twitter */}
-                    <SocialIcon
-                        className="reactive-socials"
-                        url="https://twitter.com/Jordi_Jaspers"
-                        bgColor={"transparent"}
-                        fgColor={"#64ffda"}
-                    />
-
-                    {/* Instagram */}
-                    <SocialIcon
-                        className="reactive-socials"
-                        url="https://instagram.com/Jordi_jaspers"
-                        bgColor={"transparent"}
-                        fgColor={"#64ffda"}
-                    />
-
-                    {/* LinkedIn */}
-                    <SocialIcon
-                        className="reactive-socials"
-                        url="https://www.linkedin.com/in/jordi-jaspers"
-                        bgColor={"transparent"}
-                        fgColor={"#64ffda"}
-                    />
-
-                    {/* GitHub */}
-                    <SocialIcon
-                        className="reactive-socials"
-                        url="https://www.github.com/Jordi-jaspers"
-                        bgColor={"transparent"}
-                        fgColor={"#64ffda"}
-                    />
-
-                    {/* CodeWars */}
-                    <SocialIcon
-                        className="reactive-socials"
-                        url="https://www.codewars.com/users/Jordi-Jaspers"
-                        bgColor={"transparent"}
-                        fgColor={"#64ffda"}
-                    />
-                </motion.div>
-            </div>
-                <motion.div className={"flex w-auto h-[50px] flex-row items-center text-green cursor-pointer"}
-                            initial={{
-                                x: 500,
-                                opacity: 0,
-                                scale: 0.5
-                            }}
-                            animate={{
-                                x: 0,
-                                opacity: 1,
-                                scale: 1
-                            }}
-                            transition={{
-                                duration: 1.5
-                            }}>
-
-                    <ThemeProvider enableSystem={true} attribute="class">
-                        <DarkModeToggle/>
-                    </ThemeProvider>
-
-                    <div className={"flex items-center dark:hidden"}>
-                        {/* Email */}
-                        <SocialIcon
-                            url="mailto:jordijaspers@gmail.com"
-                            className="cursor-pointer reactive-socials"
-                            network="email"
-                            bgColor={"transparent"}
-                            fgColor={"#0a192f"}
-                        />
-                        <p className={"uppercase hidden md:inline-flex text-sm text-navy"}>Get In Touch</p>
+        <header
+            className={`${isOpen ? "dark:bg-navy dark:sm:bg-transparent bg-white sm:bg-transparent " : "bg-transparent"} flex sticky top-0 p-5 items-start justify-between max-w-7xl mx-auto z-20 xl:items-center`}>
+            <motion.div
+                initial={{
+                    x: -500,
+                    opacity: 0,
+                    scale: 0.5
+                }}
+                animate={{
+                    x: 0,
+                    opacity: 1,
+                    scale: 1
+                }}
+                transition={{
+                    duration: 1.5
+                }}>
+                <SocialsBar/>
+            </motion.div>
+            <motion.div
+                initial={{
+                    x: 500,
+                    opacity: 0,
+                    scale: 0.5
+                }}
+                animate={{
+                    x: 0,
+                    opacity: 1,
+                    scale: 1
+                }}
+                transition={{
+                    duration: 1.5
+                }}>
+                <nav className="transparent max-h-[50px] min-w-[100px] w-fit h-fit">
+                    <div className={"flex flex-row items-center justify-end"}>
+                        <ThemeProvider enableSystem={true} attribute="class">
+                            <DarkModeToggle className={"h-[32px] w-[32px]"}/>
+                        </ThemeProvider>
+                        <button className={"relative inline-block align-middle overflow-hidden h-[50px] w-[50px]"}
+                                onClick={() => setIsOpen(!isOpen)}>
+                            <div className={`${hamburgerLine} ${isOpen ? "rotate-45 translate-y-2 w-6" : "w-6"}`}/>
+                            <div className={`${hamburgerLine} ${isOpen ? "opacity-0 w-0" : "opacity-100 w-4"}`}/>
+                            <div className={`${hamburgerLine} ${isOpen ? "-rotate-45 -translate-y-3 opacity-100 w-6 flex" : "hidden"}`}/>
+                        </button>
                     </div>
-                    <div className={"hidden items-center dark:flex"}>
-                        {/* Email */}
-                        <SocialIcon
-                            url="mailto:jordijaspers@gmail.com"
-                            className="cursor-pointer reactive-socials"
-                            network="email"
-                            bgColor={"transparent"}
-                            fgColor={"#64ffda"}
-                        />
-                        <p className={"uppercase hidden md:inline-flex text-sm text-green"}>Get In Touch</p>
+
+                    {/* Open the navbar as a small bubble underneath the button when clicked */}
+                    <div className={`${isOpen ? "z-0 absolute top-50 left-0 rounded-lg p-2 min-w-[300px] w-screen h-screen "
+                        + "flex flex-col justify-between items-center border md:w-fit md:h-fit md:min-h-[250px] md:relative md:top-0 md:left-0 "
+                        + "dark:border-[#374151] dark:bg-light-navy md:-translate-x-5 "
+                        + "bg-white-contrast border-slate" : "hidden"} `}>
+                        <ul className="flex flex-col w-full p-4">
+                            <li className={"pt-2 pb-2 rounded w-full text-lightest-navy hover:text-navy dark:text-slate dark:hover:text-white hover:border hover:border-amber dark:hover:border-green"}>
+                                <a href="#about" className="p-4">Blog</a>
+                            </li>
+                            <li className={"pt-2 pb-2 rounded w-full text-lightest-navy hover:text-navy dark:text-slate dark:hover:text-white hover:border hover:border-amber dark:hover:border-green"}>
+                                <a href="#about" className="p-4">Blog</a>
+                            </li>
+                            <li className={"pt-2 pb-2 rounded w-full text-lightest-navy hover:text-navy dark:text-slate dark:hover:text-white hover:border hover:border-amber dark:hover:border-green"}>
+                                <a href="#about" className="p-4">Blog</a>
+                            </li>
+                            <li className={"pt-2 pb-2 rounded w-full text-lightest-navy hover:text-navy dark:text-slate dark:hover:text-white hover:border hover:border-amber dark:hover:border-green"}>
+                                <a href="#about" className="p-4">Blog</a>
+                            </li>
+                        </ul>
+                        <div>
+                            <a href={"mailto:jordijaspers@gmail.com"}
+                               className={"reactive-socials hover:scale-110 flex flex-row dark:hidden cursor-pointer justify-center items-center uppercase text-sm text-navy"}>
+                                {/* Email */}
+                                <SocialIcon
+                                    network="email"
+                                    bgColor={"transparent"}
+                                    fgColor={"#0a192f"}
+                                />
+                                <a>Get In Touch</a>
+                            </a>
+                            <a href={"mailto:jordijaspers@gmail.com"}
+                               className={"reactive-socials hover:scale-110 dark:flex dark:flex-row hidden cursor-pointer justify-center items-center uppercase text-sm text-navy"}>
+                                {/* Email */}
+                                <SocialIcon
+                                    url="mailto:jordijaspers@gmail.com"
+                                    className="cursor-pointer reactive-socials"
+                                    network="email"
+                                    bgColor={"transparent"}
+                                    fgColor={"#64ffda"}
+                                />
+                                <p className={"uppercase hidden md:inline-flex text-sm text-green pr-2"}>Get In Touch</p>
+                            </a>
+                        </div>
                     </div>
-                </motion.div>
+                </nav>
+            </motion.div>
         </header>
     )
 }

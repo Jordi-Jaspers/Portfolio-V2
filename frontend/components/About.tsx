@@ -61,7 +61,7 @@ export default function About({}: Props) {
             </h3>
 
             <motion.div
-                className={"block mt-36 md:grid md:grid-cols-2 md:grid-rows-2 md:gap-10"}
+                className={"block mt-36 md:grid md:grid-cols-2  md:gap-10"}
                 initial={{
                     opacity: 0,
                     x: -200,
@@ -100,14 +100,14 @@ export default function About({}: Props) {
                         Fast-forward to today, and I've had the privilege of working at several companies in the Netherlands and Belgium. My
                         main focus is on back-end development, but I also have some hands-on experience with DevOps. I am currently working
                         as
-                        a <a className={"interactive-underline"} href="https://www.ilionx.com" target={"_blank"}>
+                        a <a className={"interactive-underline"} href="https://www.ilionx.com" target={"_blank"} rel="noreferrer">
                         Software Engineer at Ilionx in Maastricht.
                     </a>
                     </p>
 
                     <div className={"paragraph"}>
                         Here are a few technologies I’ve been working with recently:
-                        <ul className={"grid grid-cols-3 list-none mt-[20px]"}>
+                        <ul className={"grid grid-cols-3 md:grid-cols-2 lg:grid-cols-3 list-none mt-[20px]"}>
                             {skills.map((skill, index) => (
                                 <li className={"arrow pl-[20px] mb-[10px]"} key={index}>
                                     <a className={"interactive-underline"} href={skill.url}>{skill.name}</a>

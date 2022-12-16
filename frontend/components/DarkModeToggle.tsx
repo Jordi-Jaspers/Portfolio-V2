@@ -2,20 +2,20 @@ import React from 'react'
 import {useTheme} from "next-themes";
 import {MoonIcon, SunIcon} from "@heroicons/react/24/outline";
 
-type Props = {}
+type Props = {
+    className?: string
+}
 
-export default function DarkModeToggle({}: Props) {
+export default function DarkModeToggle({className}: Props) {
+    const iconStyle = `reactive-socials ${className}`
     const {theme, setTheme} = useTheme();
 
     return (
-        <button className="reactive-socials w-6 h-6">
-            {theme === 'light' ? <MoonIcon onClick={() => {
-                console.log("Switching to dark mode");
-                setTheme('dark')
-            }}/> : <SunIcon onClick={() => {
-                console.log("Switching to light mode");
-                setTheme('light')
-            }}/>}
+        <button className="relative inline-block align-middle overflow-hidden h-[50px] w-[50px]">
+            {theme === 'light'
+                ? <MoonIcon className={iconStyle} onClick={() => {setTheme('dark')}}/>
+                : <SunIcon className={iconStyle} onClick={() => {setTheme('light')}}/>
+            }
         </button>
     )
 }
