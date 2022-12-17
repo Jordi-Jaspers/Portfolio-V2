@@ -46,7 +46,7 @@ export default function Header({}: Props) {
                 transition={{
                     duration: 1.5
                 }}>
-                <nav className="transparent max-h-[50px] min-w-[100px] w-fit h-fit">
+                <div className="transparent max-h-[50px] min-w-[100px] w-fit h-fit">
                     <div className={"flex flex-row items-center justify-end"}>
                         <ThemeProvider enableSystem={true} attribute="class">
                             <DarkModeToggle className={"h-[32px] w-[32px]"}/>
@@ -59,7 +59,6 @@ export default function Header({}: Props) {
                         </button>
                     </div>
 
-                    {/* Open the navbar as a small bubble underneath the button when clicked */}
                     <div className={`${isOpen ? "z-0 absolute top-50 left-0 rounded-lg p-2 min-w-[300px] w-screen h-screen "
                         + "flex flex-col justify-between items-center border md:w-fit md:h-fit md:min-h-[250px] md:relative md:top-0 md:left-0 "
                         + "dark:border-[#374151] dark:bg-light-navy md:-translate-x-5 "
@@ -79,31 +78,31 @@ export default function Header({}: Props) {
                             </li>
                         </ul>
                         <div>
-                            <a href={"mailto:jordijaspers@gmail.com"}
-                               className={"reactive-socials hover:scale-110 flex flex-row dark:hidden cursor-pointer justify-center items-center uppercase text-sm text-navy"}>
-                                {/* Email */}
+                            <div className={"reactive-socials hover:scale-110 flex flex-row dark:hidden cursor-pointer justify-center items-center uppercase text-sm text-navy"}>
+                                {/*/!* Email *!/*/}
                                 <SocialIcon
+                                    url={"mailto:jordijaspers@gmail.com"}
                                     network="email"
                                     bgColor={"transparent"}
                                     fgColor={"#0a192f"}
                                 />
-                                <a>Get In Touch</a>
-                            </a>
-                            <a href={"mailto:jordijaspers@gmail.com"}
-                               className={"reactive-socials hover:scale-110 dark:flex dark:flex-row hidden cursor-pointer justify-center items-center uppercase text-sm text-navy"}>
+                                <a  >Get In Touch</a>
+                            </div>
+                            <div className={"reactive-socials hover:scale-110 dark:flex dark:flex-row hidden cursor-pointer justify-center items-center uppercase text-sm text-navy"}>
                                 {/* Email */}
                                 <SocialIcon
-                                    url="mailto:jordijaspers@gmail.com"
+                                    url={"mailto:jordijaspers@gmail.com"}
                                     className="cursor-pointer reactive-socials"
                                     network="email"
                                     bgColor={"transparent"}
                                     fgColor={"#64ffda"}
                                 />
-                                <p className={"uppercase hidden md:inline-flex text-sm text-green pr-2"}>Get In Touch</p>
-                            </a>
+                                <a className={"uppercase hidden md:inline-flex text-sm text-green pr-2"}
+                                   href={"mailto:jordijaspers@gmail.com"} >Get In Touch</a>
+                            </div>
                         </div>
                     </div>
-                </nav>
+                </div>
             </motion.div>
         </header>
     )

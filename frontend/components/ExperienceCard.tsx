@@ -50,6 +50,7 @@ export default function ExperienceCard({logo, company, role, startDate, endDate,
                             ? <div></div>
                             : stack?.map((stack, index) => (
                                 <Image
+                                    key={index}
                                     className={"h-10 w-10 m-1 rounded-full"}
                                     src={stack}
                                     width={32}
