@@ -15,7 +15,7 @@ export default function Hero({}: Props) {
     });
 
     return (
-        <div className={"h-screen min-h-[500px] flex flex-col space-y-8 items-center justify-center text-center"}>
+        <div className={"h-fit min-h-[700px] flex flex-col space-y-8 items-center justify-center text-center"}>
             <BackgroundCircles/>
             <Image
                 className={"relative rounded-full mx-auto"}

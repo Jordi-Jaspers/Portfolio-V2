@@ -55,13 +55,13 @@ let skills = [
 
 export default function About({}: Props) {
     return (
-        <div className={"flex flex-row items-start relative h-fit w-screen text-left max-w-7xl px-10 mx-auto"}>
+        <div className={"flex flex-col items-start relative h-fit w-screen text-left max-w-7xl px-10 mx-auto"}>
             <h3 className={"section-header before:content-['01.']"}>
                 About me
             </h3>
 
             <motion.div
-                className={"block mt-36 md:grid md:grid-cols-2  md:gap-10"}
+                className={"md:grid md:grid-cols-2 md:gap-10"}
                 initial={{
                     opacity: 0,
                     x: -200,
@@ -80,9 +80,10 @@ export default function About({}: Props) {
                     <p className={"paragraph"}>
                         Hello! My <span className={"interactive-underline"}>name is Jordi Jaspers</span> and I am a
                         Master graduate in Electronic & Software engineering, combined with several years of
-                        professional experience in the IT industry and a passion for developing and discovering new technologies. I always
-                        strove to resolve complex issues or create new features in the most efficient way possible. That's why I mainly
-                        became back-end Software developer.
+                        professional experience in the IT industry. My passion for web development and discovering new technologies is where
+                        I have spent the past few years honing my skills. Striving to resolve complex issues or create new modern features
+                        in the most efficient way possible is my favorite thing to do. That is why I mainly became back-end
+                        Software developer.
                     </p>
 
                     <p className={"paragraph"}>

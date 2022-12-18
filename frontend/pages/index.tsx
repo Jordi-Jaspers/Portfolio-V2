@@ -32,7 +32,7 @@ const Home: NextPage = () => {
 
             {/*  EXPERIENCE  */}
             <section id={"Experience"}>
-                {/*<Experience/>*/}
+                <Experience/>
             </section>
 
             {/*  SKILLS  */}
