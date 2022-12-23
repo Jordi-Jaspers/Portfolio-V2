@@ -8,7 +8,7 @@ type Props = {}
 
 export default function Services({}: Props) {
     return (
-        <div className={"flex flex-row items-start relative h-screen w-screen text-left max-w-7xl px-10 mx-auto"}>
+        <div className={"section-component"}>
             <h3 className={"section-header before:content-['04.']"}>
                 Services
             </h3>

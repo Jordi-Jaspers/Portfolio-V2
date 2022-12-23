@@ -11,7 +11,7 @@ export default function DarkModeToggle({className}: Props) {
     const {theme, setTheme} = useTheme();
 
     return (
-        <button className="relative inline-block align-middle overflow-hidden h-[50px] w-[50px]">
+        <button className="relative inline-block align-middle overflow-hidden h-[50px] w-[50px] flex items-center justify-center align-middle">
             {theme === 'light'
                 ? <MoonIcon className={iconStyle} onClick={() => {setTheme('dark')}}/>
                 : <SunIcon className={iconStyle} onClick={() => {setTheme('light')}}/>

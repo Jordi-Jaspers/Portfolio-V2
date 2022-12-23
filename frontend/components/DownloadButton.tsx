@@ -47,7 +47,7 @@ export default function DownloadButton({className}: Props) {
                         />
                     </svg>
                 </div>
-                <span className="font-medium"> {isDownloading ? 'Downloading...' : 'Download'} </span>
+                <span className="font-medium"> {isDownloading ? 'Downloading...' : 'Download Resume'} </span>
             </button>
         </div>
     )

@@ -51,8 +51,8 @@ const Home: NextPage = () => {
             </section>
 
             {/* FOOTER */}
-            <footer className={"flex flex-row items-center justify-center h-20 w-full bg-navy"}>
-                <a className={"text-green font-mono link-underline link-underline-black"}
+            <footer className={"flex flex-row items-center justify-center p-8 w-full"}>
+                <a className={"font-mono link-underline link-underline-black "}
                    href={"https://github.com/Jordi-Jaspers/Portfolio-V2"}>
                     © Designed and built by Jordi Jaspers
                 </a>

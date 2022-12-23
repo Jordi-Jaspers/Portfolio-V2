@@ -55,13 +55,13 @@ let skills = [
 
 export default function About({}: Props) {
     return (
-        <div className={"flex flex-col items-start relative h-fit w-screen text-left max-w-7xl px-10 mx-auto"}>
+        <div className={"section-component"}>
             <h3 className={"section-header before:content-['01.']"}>
                 About me
             </h3>
 
             <motion.div
-                className={"md:grid md:grid-cols-2 md:gap-10"}
+                className={"lg:grid lg:grid-cols-2 lg:gap-10"}
                 initial={{
                     opacity: 0,
                     x: -200,
@@ -108,7 +108,7 @@ export default function About({}: Props) {
 
                     <div className={"paragraph"}>
                         Here are a few technologies I’ve been working with recently:
-                        <ul className={"grid grid-cols-3 md:grid-cols-2 lg:grid-cols-3 list-none mt-[20px]"}>
+                        <ul className={"grid grid-cols-2 sm:grid-cols-3 list-none mt-[20px]"}>
                             {skills.map((skill, index) => (
                                 <li className={"arrow pl-[20px] mb-[10px]"} key={index}>
                                     <a className={"interactive-underline"} href={skill.url}>{skill.name}</a>
@@ -118,7 +118,7 @@ export default function About({}: Props) {
                     </div>
                 </div>
                 <Image
-                    className={"mx-[25%] mt-8 md:mx-0 md:mt-[50%] lg:mt-3 bg-origin-border p-1 border-amber/75 dark:border-green/75 border-2 border-dashed h-[300px] w-[300px] lg:h-[400px] lg:w-[400px] rounded md:rounded-full object-cover object-center shadow-2xl"}
+                    className={"mx-[25%] mt-8 lg:mx-0 lg:mt-3 bg-origin-border p-1 border-amber/75 dark:border-green/75 border-2 border-dashed h-[300px] w-[300px] lg:h-[400px] lg:w-[400px] rounded lg:rounded-full object-cover object-center shadow-2xl"}
                     src={ProfilePicture}
                     alt={"Profile picture"}
                 />

@@ -9,7 +9,8 @@ module.exports = {
     theme: {
         colors: {
             'green': '#64ffda',
-            'amber': '#fca311',
+            'amber': '#a37112',
+            'amber-light': '#fca311',
             'red': '#ef233c',
             'white': '#e6f1ff',
             'white-contrast': '#E2EBF6',
@@ -21,7 +22,11 @@ module.exports = {
             'lightest-slate': '#ccd6f6',
             'transparent': 'transparent',
         },
-        extend: {},
+        extend: {
+            fontFamily: {
+                poppins: ['Poppins', 'sans-serif'],
+            }
+        },
     },
     plugins: [],
 }

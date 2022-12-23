@@ -47,7 +47,7 @@ export default function ExperienceCard({logo, company, role, contract, startDate
 
             <article
                 className={"flex flex-col h-full rounded-l items-center text-left space-y-7 flex-shrink-0 "
-                    + "w-[350px] md:w-[450px] xl:w-[600px] bg-white-contrast dark:bg-light-navy p-10 snap-center "
+                    + "w-[350px] md:w-[450px] xl:w-[500px] 2xl:w-[600px] bg-white-contrast dark:bg-light-navy p-10 snap-center "
                     + "rounded-xl opacity-40 hover:opacity-100 cursor-pointer transition-opacity duration-200 overflow-hidden"}>
                 <Image
                     className={"w-24 h-24 rounded-full xl:w-[200px] xl:h-[200px] object-cover object-center"}
