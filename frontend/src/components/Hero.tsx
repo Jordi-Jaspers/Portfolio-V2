@@ -1,19 +1,19 @@
 import React from 'react'
-import {Cursor, useTypewriter} from "react-simple-typewriter";
-import BackgroundCircles from "./BackgroundCircles";
+
 import Image from "next/image";
 import Link from "next/link";
+import {Cursor, useTypewriter} from "react-simple-typewriter";
+
+import BackgroundCircles from "./BackgroundCircles";
 import ProfileAvatar from "../public/images/profile-avatar.png";
 
-type Props = {}
-
-export default function Hero({}: Props) {
-    const [text, count] = useTypewriter({
-        words: ["< Welcome To The Website />", "YourAverageSoftwareEngineer.java", "Order-Custom-Software-Now.sh"],
+export default function Hero() {
+    const [text] = useTypewriter({
+        words: ["< Welcome To The Website />", "YourAverageSoftwareEngineer.java", "automate-software-and-workflows.sh"],
         loop: true,
         delaySpeed: 1000,
     });
-
+    
     return (
         <div className={"h-screen min-h-[700px] flex flex-col space-y-8 items-center justify-center text-center"}>
             <BackgroundCircles/>

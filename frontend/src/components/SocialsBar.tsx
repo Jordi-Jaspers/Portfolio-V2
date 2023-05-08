@@ -1,9 +1,8 @@
-import React, {useState} from 'react'
+import React from 'react'
+
 import {SocialIcon} from "react-social-icons";
 
-type Props = {}
-
-export default function SocialsBar({}: Props) {
+export default function SocialsBar() {
     return (
         <div>
             <div className={"flex dark:hidden"}>
@@ -14,7 +13,7 @@ export default function SocialsBar({}: Props) {
                     bgColor={"transparent"}
                     fgColor={"#0a192f"}
                 />
-
+                
                 {/* Instagram */}
                 <SocialIcon
                     className="reactive-socials"
@@ -22,7 +21,7 @@ export default function SocialsBar({}: Props) {
                     bgColor={"transparent"}
                     fgColor={"#0a192f"}
                 />
-
+                
                 {/* LinkedIn */}
                 <SocialIcon
                     className="reactive-socials"
@@ -30,7 +29,7 @@ export default function SocialsBar({}: Props) {
                     bgColor={"transparent"}
                     fgColor={"#0a192f"}
                 />
-
+                
                 {/* GitHub */}
                 <SocialIcon
                     className="reactive-socials"
@@ -38,7 +37,7 @@ export default function SocialsBar({}: Props) {
                     bgColor={"transparent"}
                     fgColor={"#0a192f"}
                 />
-
+                
                 {/* CodeWars */}
                 <SocialIcon
                     className="reactive-socials"
@@ -55,7 +54,7 @@ export default function SocialsBar({}: Props) {
                     bgColor={"transparent"}
                     fgColor={"#64ffda"}
                 />
-
+                
                 {/* Instagram */}
                 <SocialIcon
                     className="reactive-socials"
@@ -63,7 +62,7 @@ export default function SocialsBar({}: Props) {
                     bgColor={"transparent"}
                     fgColor={"#64ffda"}
                 />
-
+                
                 {/* LinkedIn */}
                 <SocialIcon
                     className="reactive-socials"
@@ -71,7 +70,7 @@ export default function SocialsBar({}: Props) {
                     bgColor={"transparent"}
                     fgColor={"#64ffda"}
                 />
-
+                
                 {/* GitHub */}
                 <SocialIcon
                     className="reactive-socials"
@@ -79,7 +78,7 @@ export default function SocialsBar({}: Props) {
                     bgColor={"transparent"}
                     fgColor={"#64ffda"}
                 />
-
+                
                 {/* CodeWars */}
                 <SocialIcon
                     className="reactive-socials"

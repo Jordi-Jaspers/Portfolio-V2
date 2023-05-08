@@ -1,9 +1,8 @@
-import {motion} from 'framer-motion'
 import React from 'react'
 
-type Props = {}
+import {motion} from 'framer-motion'
 
-export default function BackgroundCircles({}: Props) {
+export default function BackgroundCircles() {
     return (
         <motion.div
             className={"relative flex justify-center items-center"}

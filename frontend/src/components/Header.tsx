@@ -1,18 +1,19 @@
 import React, {useState} from 'react'
+
 import {motion} from "framer-motion";
-import DarkModeToggle from "./DarkModeToggle";
 import {ThemeProvider} from "next-themes";
-import SocialsBar from "./SocialsBar";
 import {SocialIcon} from "react-social-icons";
 
-type Props = {}
+import DarkModeToggle from "./DarkModeToggle";
+import SocialsBar from "./SocialsBar";
+
 
 // Using 'https://github.com/jaketrent/react-social-icons' to render social icons
 // Framer motion for animations (https://www.framer.com/docs/examples/)
-export default function Header({}: Props) {
+export default function Header() {
     const [isOpen, setIsOpen] = useState(false);
     const hamburgerLine = `h-0.5 my-[0.5em] rounded-full transition ease transform duration-300 bg-navy dark:bg-green`;
-
+    
     return (
         <header
             className={`${isOpen ? "dark:bg-navy dark:sm:bg-transparent bg-white sm:bg-transparent " : "bg-transparent"} flex sticky top-0 p-5 items-start justify-between max-w-7xl mx-auto z-20 xl:items-center`}>
@@ -62,7 +63,7 @@ export default function Header({}: Props) {
                         </div>
                     </button>
                 </div>
-
+                
                 <div className={`${isOpen ? "z-0 absolute top-50 left-0 rounded-lg p-2 min-w-[300px] w-screen h-screen "
                     + "flex flex-col justify-between items-center border md:w-fit md:h-fit md:min-h-[250px] md:relative md:top-0 md:left-0 "
                     + "dark:border-[#374151] dark:bg-light-navy md:-translate-x-5 "

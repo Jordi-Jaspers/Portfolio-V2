@@ -1,12 +1,11 @@
 import React from 'react'
-import Image from "next/image";
-import ProfilePicture from "../public/images/profile-picture.jpg";
+
 import {motion} from 'framer-motion';
-import dynamic from "next/dynamic";
+import Image from "next/image";
 
-type Props = {}
+import ProfilePicture from "../public/images/profile-picture.jpg";
 
-let skills = [
+const skills = [
     {
         name: "Next.js",
         url: "https://nextjs.org/"
@@ -53,13 +52,13 @@ let skills = [
     }
 ]
 
-export default function About({}: Props) {
+export default function About() {
     return (
         <div className={"section-component"}>
             <h3 className={"section-header before:content-['01.']"}>
                 About me
             </h3>
-
+            
             <motion.div
                 className={"lg:grid lg:grid-cols-2 lg:gap-10"}
                 initial={{
@@ -85,7 +84,7 @@ export default function About({}: Props) {
                         in the most efficient way possible is my favorite thing to do. That is why I mainly became back-end
                         Software developer.
                     </p>
-
+                    
                     <p className={"paragraph"}>
                         To ensure that efficiency and those high quality solutions in my applications, <span
                         className={"interactive-underline"}>
@@ -96,7 +95,7 @@ export default function About({}: Props) {
                         className={"interactive-underline"}> mainly using
                     Java/Java EE </span> gave me a solid understanding of the Software Development process.
                     </p>
-
+                    
                     <p className={"paragraph"}>
                         Fast-forward to today, and I've had the privilege of working at several companies in the Netherlands and Belgium. My
                         main focus is on back-end development, but I also have some hands-on experience with DevOps. I am currently working
@@ -105,7 +104,7 @@ export default function About({}: Props) {
                         Software Engineer at Ilionx in Maastricht.
                     </a>
                     </p>
-
+                    
                     <div className={"paragraph"}>
                         Here are a few technologies I’ve been working with recently:
                         <ul className={"grid grid-cols-2 sm:grid-cols-3 list-none mt-[20px]"}>

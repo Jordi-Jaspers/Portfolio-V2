@@ -1,34 +1,34 @@
 import React from 'react'
+
 import {motion} from 'framer-motion';
+
+import DownloadButton from './DownloadButton';
 import ExperienceCard from "./ExperienceCard";
-import IlionxLogo from "../public/images/ilionx-logo.jpeg";
-import KulLogo from "../public/images/kul-logo.jpg";
-import HanyangLogo from "../public/images/hanyang-logo.png";
-import JavaIcon from "../public/icons/java.svg";
-import SpringIcon from "../public/icons/spring.svg";
-import KotlinIcon from "../public/icons/kotlin.svg";
-import JavaScriptIcon from "../public/icons/javascript.svg";
-import TypeScriptIcon from "../public/icons/typescript.svg";
-import ReactIcon from "../public/icons/react.svg";
+import AssemblyIcon from "../public/icons/assembly.svg";
+import BashIcon from "../public/icons/bash.svg";
+import CPlusPlusIcon from "../public/icons/c-plusplus.svg";
+import CSSIcon from "../public/icons/css-3.svg";
 import DockerIcon from "../public/icons/docker.svg";
+import GitIcon from "../public/icons/git.svg";
+import GoIcon from "../public/icons/go.svg"
+import GroovyIcon from "../public/icons/grails.svg";
+import HTMLIcon from "../public/icons/html-5.svg";
+import JavaIcon from "../public/icons/java.svg";
+import JavaScriptIcon from "../public/icons/javascript.svg";
+import KotlinIcon from "../public/icons/kotlin.svg";
 import KubernetesIcon from "../public/icons/kubernetes.svg";
 import PostgresIcon from "../public/icons/postgresql.svg";
-import RedisIcon from "../public/icons/redis.svg";
-import GitIcon from "../public/icons/git.svg";
-import LinuxIcon from "../public/icons/ubuntu.svg";
-import GroovyIcon from "../public/icons/grails.svg";
-import CPlusPlusIcon from "../public/icons/c-plusplus.svg";
-import GoIcon from "../public/icons/go.svg"
 import PythonIcon from "../public/icons/python.svg";
-import BashIcon from "../public/icons/bash.svg";
-import HTMLIcon from "../public/icons/html-5.svg";
-import CSSIcon from "../public/icons/css-3.svg";
-import AssemblyIcon from "../public/icons/assembly.svg";
-import DownloadButton from './DownloadButton';
+import ReactIcon from "../public/icons/react.svg";
+import RedisIcon from "../public/icons/redis.svg";
+import SpringIcon from "../public/icons/spring.svg";
+import TypeScriptIcon from "../public/icons/typescript.svg";
+import LinuxIcon from "../public/icons/ubuntu.svg";
+import HanyangLogo from "../public/images/hanyang-logo.png";
+import IlionxLogo from "../public/images/ilionx-logo.jpeg";
+import KulLogo from "../public/images/kul-logo.jpg";
 
-type Props = {}
-
-export default function Experience({}: Props) {
+export default function Experience() {
     return (
         <div className={"section-component"}>
             <h3 className={"section-header before:content-['02.']"}>
