@@ -50,12 +50,12 @@ export default function ExperienceCard({logo, company, role, contract, startDate
 
             <article
                 className={"flex flex-col h-full rounded-l items-center text-left space-y-7 flex-shrink-0 "
-                    + "w-[350px] md:w-[450px] xl:w-[500px] bg-white-contrast dark:bg-light-navy p-10 snap-center "
-                    + "rounded-xl opacity-40 hover:opacity-100 cursor-pointer transition-opacity duration-200 overflow-hidden"}>
+                    + "w-[350px] md:w-[450px] bg-white-contrast dark:bg-light-navy p-10 snap-center "
+                    + "rounded-xl opacity-100 md:opacity-40 hover:opacity-100 cursor-pointer transition-opacity duration-200 overflow-hidden"}>
                 <Image
-                    className={"w-24 h-24 rounded-full xl:w-[200px] xl:h-[200px] object-cover object-center"}
-                    width={32}
-                    height={32}
+                    className={"w-24 h-24 rounded-full xl:w-[150px] xl:h-[150px] object-cover object-center"}
+                    width={1200}
+                    height={1200}
                     src={logo ? logo : DefaultImage}
                     alt={"Company Logo"}
                 />
@@ -84,7 +84,7 @@ export default function ExperienceCard({logo, company, role, contract, startDate
                         {experiences === undefined || experiences?.length <= 0
                             ? <li>No experience</li>
                             : experiences?.map((experience, index) => (
-                                <li key={index} className={index >= 2 && !isContentVisible ? "hidden" : ""}>{experience}</li>
+                                <li key={index} className={index >= 1 && !isContentVisible ? "hidden" : ""}>{experience}</li>
                             ))}
                     </ul>
                     {experiences === undefined || experiences?.length > 2 &&

@@ -11,10 +11,10 @@
         "./src/public/icons/*"
       ],
       "@svg/*": [
-        "./public/svg/*"
+        "./src/public/svg/*"
       ],
       "@images/*": [
-        "./public/images/*"
+        "./src/public/images/*"
       ],
       "@interfaces/*": [
         "./src/interfaces/*"

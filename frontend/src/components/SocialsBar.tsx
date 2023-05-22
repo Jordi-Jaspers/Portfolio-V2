@@ -2,7 +2,13 @@ import React from 'react'
 
 import {SocialIcon} from "react-social-icons";
 
-export default function SocialsBar() {
+interface Props {
+    fill: string;
+    darkFill: string;
+}
+
+// Using 'https://github.com/jaketrent/react-social-icons' to render social icons
+export default function SocialsBar({fill, darkFill}: Props) {
     return (
         <div>
             <div className={"flex dark:hidden"}>
@@ -11,7 +17,7 @@ export default function SocialsBar() {
                     className="reactive-socials"
                     url="https://twitter.com/Jordi_Jaspers"
                     bgColor={"transparent"}
-                    fgColor={"#0a192f"}
+                    fgColor={fill}
                 />
                 
                 {/* Instagram */}
@@ -19,7 +25,7 @@ export default function SocialsBar() {
                     className="reactive-socials"
                     url="https://instagram.com/Jordi_jaspers"
                     bgColor={"transparent"}
-                    fgColor={"#0a192f"}
+                    fgColor={fill}
                 />
                 
                 {/* LinkedIn */}
@@ -27,7 +33,7 @@ export default function SocialsBar() {
                     className="reactive-socials"
                     url="https://www.linkedin.com/in/jordi-jaspers"
                     bgColor={"transparent"}
-                    fgColor={"#0a192f"}
+                    fgColor={fill}
                 />
                 
                 {/* GitHub */}
@@ -35,7 +41,7 @@ export default function SocialsBar() {
                     className="reactive-socials"
                     url="https://www.github.com/Jordi-jaspers"
                     bgColor={"transparent"}
-                    fgColor={"#0a192f"}
+                    fgColor={fill}
                 />
                 
                 {/* CodeWars */}
@@ -43,7 +49,7 @@ export default function SocialsBar() {
                     className="reactive-socials"
                     url="https://www.codewars.com/users/Jordi-Jaspers"
                     bgColor={"transparent"}
-                    fgColor={"#0a192f"}
+                    fgColor={fill}
                 />
             </div>
             <div className={"hidden dark:flex"}>
@@ -52,7 +58,7 @@ export default function SocialsBar() {
                     className="reactive-socials"
                     url="https://twitter.com/Jordi_Jaspers"
                     bgColor={"transparent"}
-                    fgColor={"#64ffda"}
+                    fgColor={darkFill}
                 />
                 
                 {/* Instagram */}
@@ -60,7 +66,7 @@ export default function SocialsBar() {
                     className="reactive-socials"
                     url="https://instagram.com/Jordi_jaspers"
                     bgColor={"transparent"}
-                    fgColor={"#64ffda"}
+                    fgColor={darkFill}
                 />
                 
                 {/* LinkedIn */}
@@ -68,7 +74,7 @@ export default function SocialsBar() {
                     className="reactive-socials"
                     url="https://www.linkedin.com/in/jordi-jaspers"
                     bgColor={"transparent"}
-                    fgColor={"#64ffda"}
+                    fgColor={darkFill}
                 />
                 
                 {/* GitHub */}
@@ -76,7 +82,7 @@ export default function SocialsBar() {
                     className="reactive-socials"
                     url="https://www.github.com/Jordi-jaspers"
                     bgColor={"transparent"}
-                    fgColor={"#64ffda"}
+                    fgColor={darkFill}
                 />
                 
                 {/* CodeWars */}
@@ -84,7 +90,7 @@ export default function SocialsBar() {
                     className="reactive-socials"
                     url="https://www.codewars.com/users/Jordi-Jaspers"
                     bgColor={"transparent"}
-                    fgColor={"#64ffda"}
+                    fgColor={darkFill}
                 />
             </div>
         </div>

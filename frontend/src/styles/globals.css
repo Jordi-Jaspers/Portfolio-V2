@@ -66,19 +66,19 @@
     }
 
     .default-button {
-        @apply px-3 mx-2 sm:my-2 py-2 border dark:border-lightest-navy rounded-full uppercase text-[10px] sm:text-xs
-        tracking-widest dark:text-slate transition-all dark:hover:border-green/75 dark:hover:text-lightest-slate
-        text-lightest-navy border-slate hover:border-amber/75 hover:text-navy hover:font-extrabold;
+        @apply px-3 mx-2 sm:my-2 py-2 uppercase text-[10px] sm:text-xs transition-all duration-500 scale-100 hover:duration-500 hover:scale-125
+        tracking-widest dark:text-green transition-all dark:hover:text-lightest-slate
+        text-navy hover:text-navy hover:font-extrabold;
     }
 
     .section-header {
-        @apply text-3xl md:text-4xl ml-[10px] flex min-w-full flex-row pt-10 pb-10
+        @apply text-3xl md:text-4xl ml-[10px] flex min-w-full flex-row pt-1 pb-2 md:pb-5 xl:pb-10
         before:text-amber-light dark:before:text-green before:mr-[10px]
-        after:content-[''] after:bg-amber/50 dark:after:bg-lightest-navy after:ml-[10px] after:sm:ml-[10px] after:w-[200px] after:sm:w-[300px] after:block after:h-px after:top-[20px] after:relative
+        after:content-[''] after:bg-amber/50 dark:after:bg-lightest-navy after:ml-[10px] after:sm:ml-[10px] after:w-[100px] after:sm:w-[300px] after:block after:h-px after:top-[20px] after:relative
     }
 
     .section-component {
-        @apply flex flex-col items-start relative h-fit min-h-screen w-screen text-left max-w-7xl px-10 mx-auto font-poppins
+        @apply flex flex-col items-start relative h-fit min-h-screen text-left max-w-7xl mx-auto font-poppins
     }
 
     .paragraph {
